@@ -1,0 +1,19 @@
+ <div>
+  <h1 class="hd1">{{ 'HOME.TITLE' | translate }}</h1>
+  <h2 class="hd3">
+    {{ 'HOME.TEXT' | translate }}
+  </h2>
+  <h3 class="hd4">
+    {{ 'HOME.TEXT1' | translate }}
+  </h3>
+   <div class="dv1">
+    <label for="" class="lbl">
+      {{ 'HOME.SELECT' | translate }}
+      <select #langselect (change)="translate.use(langselect.value)" class="sel">
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}
+          
+        </option>
+      </select>
+    </label>
+   </div>
+</div>
